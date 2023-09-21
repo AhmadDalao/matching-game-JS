@@ -1,0 +1,148 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.2em;
+    line-height: 1.2;
+}
+
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+
+.best-score-container {
+    text-align: center;
+}
+
+.best-score-span, .best-score-span .score-span {
+    display: inline-block;
+    padding: 10px;
+    font-size: 32px;
+}
+
+.timer_stars_section {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    padding: 20px 0;
+}
+
+.stars-holder {
+    color: gold;
+}
+
+.restart-button-top:hover {
+    cursor: pointer;
+}
+
+.card-container {
+    background: #2e3d49;
+    padding: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 40px 0;
+    text-align: center;
+    position: relative;
+}
+
+@media (min-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(5, minmax(150px, 1fr));
+    }
+}
+
+.card-container .card {
+    padding: 15px;
+    border-radius: 8px;
+    min-height: 200px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #e402b2;
+}
+
+
+.card-container .card:hover {
+    cursor: pointer;
+}
+
+.card-container .card i {
+    color: white;
+    font-size: 0;
+}
+
+.card-container .card.correct {
+    background-color: greenyellow;
+    pointer-events: none;
+}
+
+.card-container .card.selected {
+    background-color: rebeccapurple;
+    pointer-events: none;
+    cursor: default;
+}
+
+.card-container .card.show {
+    background-color: #02b3e4;
+}
+
+.card-container .card.correct i, .card-container .card.selected i, .card-container .card.show i {
+    font-size: 4em;
+}
+
+dialog {
+    z-index: 9999;
+    padding: 20px;
+    width: 400px;
+    height: 150px;
+    position: absolute;
+    top: 50%;
+    text-align: center;
+    left: 50%;
+    background-color: bisque;
+    transform: translate(-50%, -50%);
+    border-radius: 12px;
+    border: none;
+    box-shadow: 0 500rem 500rem 541rem rgba(0, 0, 0, 0.5);
+}
